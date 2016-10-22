@@ -131,8 +131,8 @@ pre_install(){
     fi
     # Set ShadowsocksR config password
     echo "Please input password for ShadowsocksR:"
-    read -p "(Default password: teddysun.com):" shadowsockspwd
-    [ -z "${shadowsockspwd}" ] && shadowsockspwd="teddysun.com"
+    read -p "(Default password: 161229):" shadowsockspwd
+    [ -z "${shadowsockspwd}" ] && shadowsockspwd="161229"
     echo
     echo "---------------------------"
     echo "password = ${shadowsockspwd}"
@@ -142,8 +142,8 @@ pre_install(){
     while true
     do
     echo -e "Please input port for ShadowsocksR [1-65535]:"
-    read -p "(Default port: 8989):" shadowsocksport
-    [ -z "${shadowsocksport}" ] && shadowsocksport="8989"
+    read -p "(Default port: 8787):" shadowsocksport
+    [ -z "${shadowsocksport}" ] && shadowsocksport="8787"
     expr ${shadowsocksport} + 0 &>/dev/null
     if [ $? -eq 0 ]; then
         if [ ${shadowsocksport} -ge 1 ] && [ ${shadowsocksport} -le 65535 ]; then
@@ -253,18 +253,18 @@ config_shadowsocks(){
 {
     "server":"0.0.0.0",
     "server_ipv6":"::",
-    "server_port":8787
-    "password":"161229",
-    "timeout":500,
+    "server_port":${shadowsocksport},
+    "password":"${shadowsockspwd}",
+    "timeout":120,
     "method":"rc4-md5",
     "protocol": "auth_aes128_md5",
     "protocol_param": "baidu.com",
     "obfs": "tls1.2_ticket_auth",
     "obfs_param": "baidu.com",
-    "redirect": "baidu.com:443",
-    "dns_ipv6": false,
-    "fast_open": false,
-    "workers": 1
+    "redirect": "www.baidu.com:443",
+    "dns_ipv6":false,
+    "fast_open":false,
+    "workers":1
 }
 EOF
 }
