@@ -263,7 +263,7 @@ config_shadowsocks(){
     "obfs_param": "baidu.com",
     "redirect": "www.baidu.com:443",
     "dns_ipv6":false,
-    "fast_open":false,
+    "fast_open":true,
     "workers":1
 }
 EOF
