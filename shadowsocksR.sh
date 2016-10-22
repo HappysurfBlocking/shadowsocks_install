@@ -254,10 +254,8 @@ config_shadowsocks(){
     "server":"0.0.0.0",
     "server_ipv6":"::",
     "server_port":8787
-    "local_address":"127.0.0.1",
-    "local_port":8787,
     "password":"161229",
-    "timeout":300,
+    "timeout":500,
     "method":"rc4-md5",
     "protocol": "auth_aes128_md5",
     "protocol_param": "baidu.com",
@@ -265,7 +263,7 @@ config_shadowsocks(){
     "obfs_param": "baidu.com",
     "redirect": "baidu.com:443",
     "dns_ipv6": false,
-    "fast_open": true,
+    "fast_open": false,
     "workers": 1
 }
 EOF
