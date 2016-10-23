@@ -219,7 +219,7 @@ config_shadowsocks(){
     "password":"${shadowsockspwd}",
     "timeout":500,
     "method":"rc4-md5",
-    "fast_open":false
+    "fast_open":true
 }
 EOF
 }
