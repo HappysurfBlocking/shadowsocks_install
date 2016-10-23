@@ -217,8 +217,8 @@ config_shadowsocks(){
     "local_address":"127.0.0.1",
     "local_port":1080,
     "password":"${shadowsockspwd}",
-    "timeout":300,
-    "method":"aes-256-cfb",
+    "timeout":500,
+    "method":"rc4-md5",
     "fast_open":false
 }
 EOF
