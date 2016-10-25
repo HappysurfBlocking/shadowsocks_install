@@ -257,7 +257,7 @@ config_shadowsocks(){
     "password":"${shadowsockspwd}",
     "timeout":120,
     "method":"rc4-md5",
-    "protocol": "auth_aes128_md5",
+    "protocol": "auth_sha1_v4",
     "protocol_param": "",
     "obfs": "tls1.2_ticket_auth",
     "obfs_param": "bing.com",
