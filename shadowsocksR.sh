@@ -255,7 +255,7 @@ config_shadowsocks(){
     "server_ipv6":"::",
     "server_port":${shadowsocksport},
     "password":"${shadowsockspwd}",
-    "timeout":120,
+    "timeout":500,
     "method":"rc4-md5",
     "protocol": "auth_sha1_v4",
     "protocol_param": "cn.bing.com",
